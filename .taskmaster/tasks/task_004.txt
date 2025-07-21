@@ -1,0 +1,14 @@
+# Task ID: 4
+# Title: 設置 Chroma 向量資料庫
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: 初始化和配置 Chroma 向量資料庫
+# Details:
+1. 導入 Chroma
+2. 設置資料庫持久化目錄
+3. 配置向量嵌入模型
+4. 初始化資料庫連接
+
+# Test Strategy:
+確認資料庫可以正常連接和操作

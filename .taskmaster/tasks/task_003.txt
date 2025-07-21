@@ -1,0 +1,14 @@
+# Task ID: 3
+# Title: 整合 CKIP 中文斷詞系統
+# Status: pending
+# Dependencies: 2
+# Priority: high
+# Description: 使用 CKIP Transformers 實作中文文本斷詞功能
+# Details:
+1. 導入 ckip-transformers
+2. 初始化 CKIP 斷詞模型
+3. 實作文本斷詞處理函數
+4. 處理從 PDF 讀取的文本
+
+# Test Strategy:
+驗證中文文本可以正確進行斷詞

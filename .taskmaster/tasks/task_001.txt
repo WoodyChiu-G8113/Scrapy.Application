@@ -1,0 +1,18 @@
+# Task ID: 1
+# Title: 專案環境設置與套件管理
+# Status: completed
+# Dependencies: None
+# Priority: high
+# Description: 使用 uv 設置 Python 專案環境並安裝必要套件
+# Details:
+1. 安裝 uv 套件管理工具
+2. 初始化專案目錄
+3. 使用 uv 安裝以下套件：
+   - langchain
+   - pypdf
+   - chromadb
+   - ckip-transformers
+4. 建立 requirements.txt
+
+# Test Strategy:
+確認所有套件皆已正確安裝且可以導入

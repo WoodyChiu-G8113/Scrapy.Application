@@ -1,0 +1,11 @@
+# Task ID: 11
+# Title: 整理 rag_app.py 檔案移除不必要的 print
+# Status: in-progress
+# Dependencies: 1
+# Priority: medium
+# Description: 先確認專案是可以正常執行再進行程式改寫
+# Details:
+
+
+# Test Strategy:
+

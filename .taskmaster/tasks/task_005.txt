@@ -1,0 +1,14 @@
+# Task ID: 5
+# Title: 實作文本向量化
+# Status: pending
+# Dependencies: 3, 4
+# Priority: medium
+# Description: 將處理後的文本轉換為向量形式並存入資料庫
+# Details:
+1. 設置 OpenAIEmbeddings
+2. 實作向量化處理函數
+3. 建立文本索引
+4. 將向量數據存入 Chroma
+
+# Test Strategy:
+驗證文本可以成功向量化並存入資料庫

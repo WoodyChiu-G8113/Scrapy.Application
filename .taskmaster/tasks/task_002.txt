@@ -1,0 +1,14 @@
+# Task ID: 2
+# Title: 實作 PDF 文件載入器
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: 使用 PyPDFLoader 讀取 PDF 文件內容
+# Details:
+1. 導入 PyPDFLoader
+2. 實作讀取 114news_Q1.pdf 的功能
+3. 建立文件分割邏輯
+4. 返回處理後的文件內容
+
+# Test Strategy:
+確認 PDF 內容可以正確讀取並分割

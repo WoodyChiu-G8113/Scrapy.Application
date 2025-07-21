@@ -1,0 +1,136 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "專案環境設置與套件管理",
+        "description": "使用 uv 設置 Python 專案環境並安裝必要套件",
+        "details": "1. 安裝 uv 套件管理工具\n2. 初始化專案目錄\n3. 使用 uv 安裝以下套件：\n   - langchain\n   - pypdf\n   - chromadb\n   - ckip-transformers\n4. 建立 requirements.txt",
+        "testStrategy": "確認所有套件皆已正確安裝且可以導入",
+        "priority": "high",
+        "dependencies": [],
+        "status": "completed",
+        "subtasks": [],
+        "updated": "2025-07-20T09:51:53.072Z"
+      },
+      {
+        "id": 2,
+        "title": "實作 PDF 文件載入器",
+        "description": "使用 PyPDFLoader 讀取 PDF 文件內容",
+        "details": "1. 導入 PyPDFLoader\n2. 實作讀取 114news_Q1.pdf 的功能\n3. 建立文件分割邏輯\n4. 返回處理後的文件內容",
+        "testStrategy": "確認 PDF 內容可以正確讀取並分割",
+        "priority": "high",
+        "dependencies": [1],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "整合 CKIP 中文斷詞系統",
+        "description": "使用 CKIP Transformers 實作中文文本斷詞功能",
+        "details": "1. 導入 ckip-transformers\n2. 初始化 CKIP 斷詞模型\n3. 實作文本斷詞處理函數\n4. 處理從 PDF 讀取的文本",
+        "testStrategy": "驗證中文文本可以正確進行斷詞",
+        "priority": "high",
+        "dependencies": [2],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "設置 Chroma 向量資料庫",
+        "description": "初始化和配置 Chroma 向量資料庫",
+        "details": "1. 導入 Chroma\n2. 設置資料庫持久化目錄\n3. 配置向量嵌入模型\n4. 初始化資料庫連接",
+        "testStrategy": "確認資料庫可以正常連接和操作",
+        "priority": "high",
+        "dependencies": [1],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "實作文本向量化",
+        "description": "將處理後的文本轉換為向量形式並存入資料庫",
+        "details": "1. 設置 OpenAIEmbeddings\n2. 實作向量化處理函數\n3. 建立文本索引\n4. 將向量數據存入 Chroma",
+        "testStrategy": "驗證文本可以成功向量化並存入資料庫",
+        "priority": "medium",
+        "dependencies": [3, 4],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "整合 LLM 模型",
+        "description": "設置和配置語言模型",
+        "details": "1. 配置 ChatOpenAI\n2. 設置模型參數\n3. 建立提示模板\n4. 實作回應生成邏輯",
+        "testStrategy": "確認模型可以正確生成回應",
+        "priority": "medium",
+        "dependencies": [6],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "實作 RAG 鏈",
+        "description": "整合檢索系統和語言模型",
+        "details": "1. 創建檢索鏈\n2. 實作文檔組合邏輯\n3. 配置系統提示\n4. 整合檢索和回應生成",
+        "testStrategy": "測試完整 RAG 流程的功能",
+        "priority": "medium",
+        "dependencies": [7],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "建立 API 入口",
+        "description": "實作 API 接口供外部訪問",
+        "details": "1. 選擇 Web 框架（如 FastAPI）\n2. 實作 API 端點\n3. 添加錯誤處理\n4. 設置請求驗證",
+        "testStrategy": "測試 API 端點的功能和穩定性",
+        "priority": "low",
+        "dependencies": [8],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "實作 PRD 更新機制",
+        "description": "實現自動更新 prd.txt 的功能",
+        "details": "1. 建立文件寫入邏輯\n2. 實作版本控制\n3. 添加更新日誌\n4. 設置自動備份",
+        "testStrategy": "確認 prd.txt 可以正確更新和備份",
+        "priority": "low",
+        "dependencies": [9],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 11,
+        "title": "整理 rag_app.py 檔案移除不必要的 print",
+        "description": "先確認專案是可以正常執行再進行程式改寫",
+        "status": "in-progress",
+        "priority": "medium",
+        "dependencies": ["1"],
+        "updated": "2025-07-20T10:10:39.983Z"
+      },
+      {
+        "id": 12,
+        "title": "將每個Step切成獨立的 function 呼叫",
+        "description": "我習慣的語言是 C# 所以希望可以改成OOP寫法",
+        "status": "todo",
+        "priority": "medium",
+        "dependencies": ["11"]
+      },
+      {
+        "id": 13,
+        "title": "建立 CheckAPIKey.py 確認 env 的 API Key 是否可以正常呼叫",
+        "description": "我想確認OPENAI_API_KEY工能否可以正常呼叫",
+        "status": "todo",
+        "priority": "high",
+        "dependencies": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-07-20T09:41:20.225Z",
+      "updated": "2025-07-20T09:41:20.225Z",
+      "description": "Tasks for master context"
+    }
+  }
+}

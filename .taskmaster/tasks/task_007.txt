@@ -1,0 +1,14 @@
+# Task ID: 7
+# Title: 整合 LLM 模型
+# Status: pending
+# Dependencies: 6 (Not found)
+# Priority: medium
+# Description: 設置和配置語言模型
+# Details:
+1. 配置 ChatOpenAI
+2. 設置模型參數
+3. 建立提示模板
+4. 實作回應生成邏輯
+
+# Test Strategy:
+確認模型可以正確生成回應

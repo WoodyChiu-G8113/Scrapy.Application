@@ -1,0 +1,11 @@
+# Task ID: 13
+# Title: 建立 CheckAPIKey.py 確認 env 的 API Key 是否可以正常呼叫
+# Status: todo
+# Dependencies: None
+# Priority: high
+# Description: 我想確認OPENAI_API_KEY工能否可以正常呼叫
+# Details:
+
+
+# Test Strategy:
+

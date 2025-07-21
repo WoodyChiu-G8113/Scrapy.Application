@@ -1,0 +1,11 @@
+# Task ID: 12
+# Title: 將每個Step切成獨立的 function 呼叫
+# Status: todo
+# Dependencies: 11
+# Priority: medium
+# Description: 我習慣的語言是 C# 所以希望可以改成OOP寫法
+# Details:
+
+
+# Test Strategy:
+
